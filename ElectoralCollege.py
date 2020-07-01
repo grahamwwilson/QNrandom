@@ -3,16 +3,24 @@ from vpython import *
 import random
 from myrandom import *
 
+# The user can change the following parameters that are capitalized
+#
+# SEED        (to chose a different set of random numbers)
+# NINSTANCES  Number of experiments to run
+# NTOPRINT    Number of instances to print
+# BIAS        Modify the assumed fractions by a constant percentage. For example 0.02 for +2% to R.
+# FERROR      Modify the assumed errors by a constant factor. For example 2.0 = double the error.
+
 # Set up python lists with 6 battle-ground states and their electoral-college votes. 
 # States are ordered from more Democratic to more Republican based on 2016 margins.
 states = ["MI", "WI", "PA", "FL", "NC", "AZ"]
 ecvotes = ["16", "10", "20", "29", "15", "11"]
-ptilts = [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5]
 # list with assumed mean fraction of votes for the Republican 
 # assume no third party candidates, so fraction for the Democrat is 1-f_R
 means = [0.475, 0.485, 0.495, 0.505, 0.515, 0.525]
-# should check how polling people define errors
-errors = [0.03, 0.03, 0.03, 0.03, 0.03, 0.03]
+# should check how polling people define errors. NYTimes/Siena poll had "MoE" of about 0.043.
+# this is a 95% CL so need to divide by 1.96
+errors = [0.022, 0.022, 0.022, 0.022, 0.022, 0.022]
 
 # Assume same result as 2016 for all other states, including
 # Maine and Nebraska that use the congressional district method
@@ -28,7 +36,21 @@ dvictories = 0
 ties = 0
 
 NINSTANCES = 100000    # Number of experiments to run
-NTOPRINT = 10          # Number of experiments to print
+NTOPRINT = 5           # Number of experiments to print
+
+BIAS  = 0.00     # Add a bias per state
+FERROR = 1.0      # Increase/decrease the error assumption by a factor
+for x in range(len(states)):
+    means[x] += BIAS
+    errors[x] *= FERROR
+
+# Run all the experiments keeping track of how many votes for each candidate 
+# First let's print the assumptions
+print('ELECTORAL COLLEGE SIMULATOR based on 6 battle-ground states with following fractional votes')
+print(states)
+print(means)
+print(errors)
+print()
 
 for i in range(NINSTANCES):
     rtot = rbase       # Initialize Republican vote total with other states from 2016
@@ -71,6 +93,7 @@ for i in range(NINSTANCES):
 #Summary
 print(' ')
 print('Summary based on',NINSTANCES,'instances using SEED',SEED)
-print('RED TEAM VICTORIES :    ',rvictories)
-print('BLUE TEAM VICTORIES:    ',dvictories)
-print('ELECTORAL COLLEGE TIES:  ',ties)
+print('RED TEAM VICTORIES :    ',rvictories,'  ',100.0*rvictories/NINSTANCES,'%')
+print('BLUE TEAM VICTORIES:    ',dvictories,'  ',100.0*dvictories/NINSTANCES,'%' )
+print('ELECTORAL COLLEGE TIES:  ',ties,'   ',100.0*ties/NINSTANCES,'%')
+
