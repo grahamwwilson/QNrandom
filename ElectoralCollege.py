@@ -3,13 +3,12 @@ from vpython import *
 import random
 from myrandom import *
 
-# Set up lists with 6 battle-ground states and their electoral-college
-# votes. States are ordered from more Democratic to more Republican
-# based on 2016 margins
+# Set up python lists with 6 battle-ground states and their electoral-college votes. 
+# States are ordered from more Democratic to more Republican based on 2016 margins.
 states = ["MI", "WI", "PA", "FL", "NC", "AZ"]
 ecvotes = ["16", "10", "20", "29", "15", "11"]
 ptilts = [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5]
-# list with assumed mean fraction of votes for the Replublican 
+# list with assumed mean fraction of votes for the Republican 
 # assume no third party candidates, so fraction for the Democrat is 1-f_R
 means = [0.475, 0.485, 0.495, 0.505, 0.515, 0.525]
 # should check how polling people define errors
@@ -21,28 +20,31 @@ dbase = 232
 rbase = 205
 
 SEED = 206
-# initialize the random number generator
+# initialize the random number generator using specified seed
 random.seed(SEED)
 
 rvictories = 0
 dvictories = 0
 ties = 0
 
-NINSTANCES = 100000
-NTOPRINT = 10
+NINSTANCES = 100000    # Number of experiments to run
+NTOPRINT = 10          # Number of experiments to print
 
 for i in range(NINSTANCES):
-    dtot = dbase
-    rtot = rbase
+    rtot = rbase       # Initialize Republican vote total with other states from 2016
+    dtot = dbase       # Initialize Democratic vote total with other states from 2016
     results = []
     for x in range(len(states)):
-# roll the dice for what fraction of votes the Republican gets
-# based on a normal distribution with an assumed mean and error
-        value = NormalVariate(means[x], errors[x])
+# roll the dice for each battle-ground state to see what fraction of votes 
+# the Republican gets based on a normal (aka Gaussian) distribution with the specified 
+# means and errors from above
+        value = NormalVariate(means[x], errors[x])  # this function is in myrandom.py
         if value > 0.50:
+# if the vote total for R exceeds 50%, the R wins
             rtot += int(ecvotes[x])
             results.append("R ")
         else:
+# the vote total for D exceeds 50%, so the D wins this state
             dtot += int(ecvotes[x])
             results.append("D ")
     if i < NTOPRINT:
@@ -72,4 +74,3 @@ print('Summary based on',NINSTANCES,'instances using SEED',SEED)
 print('RED TEAM VICTORIES :    ',rvictories)
 print('BLUE TEAM VICTORIES:    ',dvictories)
 print('ELECTORAL COLLEGE TIES:  ',ties)
-    
