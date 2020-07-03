@@ -7,13 +7,13 @@ MEAN  = 0.0
 RMS   = 1.0
 
 SEED = 202
-# initialize the random number generator using specified seed
+# Initialize the random number generator using specified seed
 random.seed(SEED)
 
 NINSTANCES = 100000    # Number of experiments to run
 NTOPRINT = 5           # Number of experiments to print
 
-# keep track of statistics too
+# Keep track of statistics too
 xsum = 0.0
 xxsum = 0.0
 
@@ -32,7 +32,7 @@ besselfactor = float(NINSTANCES)/float(NINSTANCES-1)
 samplevariance = besselfactor*(samplemeanxx - samplemeanx*samplemeanx)
 samplesd = sqrt(samplevariance)
 
-#Summary
+# Summary
 print(' ')
 print('Summary based on',NINSTANCES,'instances using SEED',SEED)
 print('Observed mean ',samplemeanx)
