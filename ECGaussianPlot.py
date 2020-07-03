@@ -61,7 +61,7 @@ print(' nrepublican =            ',nrepublican,' ',100.0*nrepublican/NINSTANCES,
 # Plot the generated data
 plot.hist(xlist, bins=50)
 plot.title('Histogram')
-plot.xlabel('x')
+plot.xlabel('x = fraction of vote for R')
 plot.ylabel('Instances per bin')
 plot.show()
 
@@ -70,7 +70,7 @@ rv = ss.norm(0.515,0.022)  # functional form of normal distribution
 # so that it can be interpreted as a probability density per bin
 plot.hist(xlist, density=True, bins=50, label="Data")
 plot.title('Normalized Histogram')
-plot.xlabel('x')
+plot.xlabel('x = fraction of vote for R')
 plot.ylabel('Probability density, p(x)')
 x = np.linspace(0.40,0.60)
 h = plot.plot(x, rv.pdf(x), lw=2, label="PDF")
