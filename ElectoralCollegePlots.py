@@ -2,7 +2,6 @@
 import random
 from myrandom import *
 import matplotlib.pyplot as plot
-#from ordered_set import OrderedSet
 
 # The user can change the following parameters that are capitalized
 #
