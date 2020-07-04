@@ -3,6 +3,9 @@ python code for KU QuarkNet workshop 2020
 
 Examples in increasing complexity
 
+-1 Circle.py
+   dart-board example for area of unit circle
+
 0. ExponentialPlot.py
    throw exponential random numbers for the decay time of muons
 
