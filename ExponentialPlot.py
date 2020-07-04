@@ -1,4 +1,4 @@
-# Add some plotting
+# ExponentialPlot.py
 import random
 from myrandom import *
 import math

@@ -1,7 +1,7 @@
-# Add some plotting
+# ECGaussianPlot.py
 import random
-from myrandom import *
 import math
+from myrandom import *
 import numpy as np
 import matplotlib.pyplot as plot
 import scipy.stats as ss

@@ -4,7 +4,7 @@ python code for KU QuarkNet workshop 2020
 Examples in increasing complexity
 
 1  Circle.py
-   Dart-board example for area of unit circle
+   Dart-board example for area of unit circle using uniform random numbers
 
 2a Gaussian.py
    Throw Gaussian random numbers and keep track of statistics for the 
