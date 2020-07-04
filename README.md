@@ -13,7 +13,7 @@ Examples in increasing complexity
    details/understanding see later more explicit examples (2d,2e).
 
 2b GaussianExplore.py
-   Essentially the same as 1a, but easier to explore further 
+   Essentially the same as 2a, but easier to explore further 
    what is going on, especially in the notebook context
 
 2c GaussianPlot.py
@@ -28,7 +28,7 @@ Examples in increasing complexity
    from uniform random numbers
 
 2e GaussianGenPlot.py
-   Example 2d with plots
+   GaussianGen.py example with plots
 
 3  ExponentialPlot.py
    Throw exponential random numbers for the decay time of muons
