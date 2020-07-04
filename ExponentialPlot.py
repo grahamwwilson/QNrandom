@@ -1,6 +1,7 @@
 # Add some plotting
 import random
 from myrandom import *
+import math
 import numpy as np
 import matplotlib.pyplot as plot
 import scipy.stats as ss
@@ -31,7 +32,7 @@ for i in range(NINSTANCES):
 # applied to the exponential distribution to obtain a random time variable, t, 
 # that comes from the desired exponential probability density function 
 # namely p(t; TAU) = (1/TAU) exp(-t/TAU)
-    t = -TAU*log(1.0-u)
+    t = -TAU*math.log(1.0-u)
     tlist.append(t)
     tsum += t
     ttsum += t*t
@@ -42,14 +43,14 @@ for i in range(NINSTANCES):
 samplemeant = tsum/float(NINSTANCES)
 samplemeantt = ttsum/float(NINSTANCES)
 samplevariance = samplemeantt - samplemeant*samplemeant
-samplesd = sqrt(samplevariance)
+samplesd = math.sqrt(samplevariance)
 
 # Summary
 print(' ')
 print('Summary based on',NINSTANCES,'instances using SEED',SEED)
 print('Observed mean ',samplemeant)
 print('Observed rms ',samplesd)
-print('RESULT <t> = ',samplemeant,' +- ',samplesd/sqrt(NINSTANCES))
+print('RESULT <t> = ',samplemeant,' +- ',samplesd/math.sqrt(NINSTANCES))
 
 # Plot the generated data
 plot.hist(tlist, bins=50)

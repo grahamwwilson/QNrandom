@@ -1,4 +1,5 @@
 import random
+import math
 from myrandom import *
 
 # Illustrate Gaussian random number generator
@@ -30,11 +31,11 @@ samplemeanx = xsum/float(NINSTANCES)
 samplemeanxx = xxsum/float(NINSTANCES)
 besselfactor = float(NINSTANCES)/float(NINSTANCES-1)
 samplevariance = besselfactor*(samplemeanxx - samplemeanx*samplemeanx)
-samplesd = sqrt(samplevariance)
+samplesd = math.sqrt(samplevariance)
 
 # Summary
 print(' ')
 print('Summary based on',NINSTANCES,'instances using SEED',SEED)
 print('Observed mean ',samplemeanx)
 print('Observed rms ',samplesd)
-print('RESULT <x> = ',samplemeanx,' +- ',samplesd/sqrt(NINSTANCES))
+print('RESULT <x> = ',samplemeanx,' +- ',samplesd/math.sqrt(NINSTANCES))

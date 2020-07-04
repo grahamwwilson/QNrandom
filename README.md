@@ -30,10 +30,10 @@ Examples in increasing complexity
 2e GaussianGenPlot.py
    Example 2d with plots
 
-3. ExponentialPlot.py
+3  ExponentialPlot.py
    Throw exponential random numbers for the decay time of muons
 
-4. ECGaussianPlot.py
+4  ECGaussianPlot.py
    Same as 2c above, but using an assumed mean of 51.5% and 
    a standard deviation of 2.2%. This corresponds to what polling firms 
    would call a 4.3% Margin-of-Error (1.96*2.2% = 4.3%).
@@ -44,7 +44,10 @@ Examples in increasing complexity
    favored by the poll actually get more than half the cast votes?
    (assumes only two candidates on the ballot).
 
-5. ElectoralCollege.py
+5a ElectoralCollege.py
    Simulator for electoral college results based on throwing Gaussian 
    random numbers like in ECGaussianPlot.py for 6 battle-ground states 
    with different numbers of electoral votes.
+
+5b ElectoralCollegePlots.py
+   Add plots and more diagnostics

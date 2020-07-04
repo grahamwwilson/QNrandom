@@ -1,5 +1,6 @@
 # Add some plotting
 import random
+import math
 from myrandom import *
 import numpy as np
 import matplotlib.pyplot as plot
@@ -42,14 +43,14 @@ samplemeanx = xsum/float(NINSTANCES)
 samplemeanxx = xxsum/float(NINSTANCES)
 besselfactor = float(NINSTANCES)/float(NINSTANCES-1)
 samplevariance = besselfactor*(samplemeanxx - samplemeanx*samplemeanx)
-samplesd = sqrt(samplevariance)
+samplesd = math.sqrt(samplevariance)
 
 # Summary
 print(' ')
 print('Summary based on',NINSTANCES,'instances using SEED',SEED)
 print('Observed mean ',samplemeanx)
 print('Observed rms ',samplesd)
-print('RESULT <x> = ',samplemeanx,' +- ',samplesd/sqrt(NINSTANCES))
+print('RESULT <x> = ',samplemeanx,' +- ',samplesd/math.sqrt(NINSTANCES))
 print(' ncentral (< 1.0  s.d.) = ',ncentral,' ',100.0*ncentral/NINSTANCES,'%')
 print(' noutlier (> 1.96 s.d.) =  ',noutlier,'  ',100.0*noutlier/NINSTANCES,'%')
 

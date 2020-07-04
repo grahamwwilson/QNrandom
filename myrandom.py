@@ -1,6 +1,5 @@
-from vpython import *
 import random
-
+import math
 
 def NormalVariate(mean, rms):
     # Function to generate a random number from a normal distribution with specified
@@ -13,10 +12,8 @@ def NormalVariate(mean, rms):
 # with mean of zero and variance of 1
     if ALGORITHM == 1:
         zValue = StandardNormalVariate1()
-    elif ALGORITHM == 2:
-        zValue = StandardNormalVariate2()
     else:
-        zValue = StandardNormalVariate3()
+        zValue = StandardNormalVariate2()
 
 # use this zValue to choose random number from the normal distribution with
 # specified mean and rms
@@ -52,33 +49,12 @@ def StandardNormalVariate2():
     LPRINT = False
     u1 = random.uniform(0.0, 1.0)
     u2 = random.uniform(0.0, 1.0)
-    R = sqrt(-2.0*log(u1))
+    R = math.sqrt(-2.0*math.log(u1))
 # Method yields two independent standard normal variates (z1, z2)
 # A more efficient implementation that uses both is easily feasible
 # Here we just use the first one, z1.
-    z1 = R*cos(2.0*pi*u2)
-    z2 = R*sin(2.0*pi*u2)
+    z1 = R*math.cos(2.0*math.pi*u2)
+    z2 = R*math.sin(2.0*math.pi*u2)
     if LPRINT:
         print("Algorithm 2 chosen zValue ", z1)
     return z1
-
-
-def StandardNormalVariate3():
-    # Function to generate a random number from a standard normal distribution
-    #
-    # Algorithm 3:
-    # Use basic form of Box-Muller method to generate standard normal variates
-    # (this is NOT an approximation)
-    # See https://en.wikipedia.org/wiki/Box-Muller_transform for details
-    LPRINT = False
-    u1 = random.uniform(0.0, 1.0)
-    u2 = random.uniform(0.0, 1.0)
-    R = sqrt(-2.0*log(u1))
-# Method yields two independent standard normal variates (z1, z2)
-# A more efficient implementation that uses both is easily feasible
-# Here instead of using the first one, z1, as in Algorithm 2, we instead use z2
-    z1 = R*cos(2.0*pi*u2)
-    z2 = R*sin(2.0*pi*u2)
-    if LPRINT:
-        print("Algorithm 3 chosen zValue ", z2)
-    return z2
