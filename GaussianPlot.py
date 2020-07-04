@@ -71,4 +71,3 @@ x = np.linspace(-5.0,5.0)
 h = plot.plot(x, rv.pdf(x), lw=2, label="PDF")
 plot.legend(loc="upper right")
 plot.show()
-

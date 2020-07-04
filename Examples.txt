@@ -1,0 +1,32 @@
+from sigfig import round
+
+# How can we figure out what the 100th x-value was?
+print('Trial 99,' x = ',xlist[99])
+
+# just like we can still see what was there for the first x-value
+print('Trial 0, x = ',xlist[0])
+
+# or even just reuse the above code a little
+i=123
+print('Trial ',i,' x = ',xlist[i])
+
+# print out the complete list of generated values
+print(xlist)
+
+print(round(xlist[5],sigfigs=6))
+
+print(round(xlist,sigfigs=4))
+
+for i in range(len(xlist)):
+    print(i,' :',round(xlist[i],decimals=5))
+
+for i in range(20):
+    print(i,' :',round(xlist[i],sigfigs=5))
+
+for i in range(20):
+    print(i,':',f"{xlist[i]:8.5f}")
+
+See https://docs.python.org/3/library/string.html#format-specification-mini-language 
+for string formatting
+
+
