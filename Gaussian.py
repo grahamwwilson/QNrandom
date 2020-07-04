@@ -8,8 +8,8 @@ from myrandom import *
 MEAN  = 0.0
 RMS   = 1.0
 
-SEED = 202
 # Initialize the random number generator using specified seed
+SEED = 202
 random.seed(SEED)
 
 NINSTANCES = 100000    # Number of experiments to run
