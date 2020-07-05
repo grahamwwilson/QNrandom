@@ -30,8 +30,12 @@ Examples in increasing complexity
 2e GaussianGenPlot.py
    GaussianGen.py example with plots
 
-3  ExponentialPlot.py
+3a ExponentialPlot.py
    Throw exponential random numbers for the decay time of muons
+
+3b RadioCarbonDating.py
+   Simulate radioactive decay in the context of dating 
+   archaelogical/palaeontological samples using C-14.
 
 4  ECGaussianPlot.py
    Same as 2c above, but using an assumed mean of 51.5% and 
