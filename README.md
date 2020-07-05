@@ -3,6 +3,9 @@ python code for KU QuarkNet workshop 2020
 
 Examples in increasing complexity
 
+0  Uniform.py
+   Starter example with uniform random numbers.
+
 1  Circle.py
    Dart-board example for area of unit circle using uniform random numbers
 

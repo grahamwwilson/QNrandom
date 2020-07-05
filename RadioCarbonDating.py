@@ -45,7 +45,7 @@ TAU = HALFLIFE       # FIXME - you need to correctly convert from half-life to l
 print('Half-life set to',HALFLIFE,'years - corresponding lifetime is',TAU,'years.','Is this correct?')
 
 N0 = 1000
-DT = 100.0  # Time-step in years (should be short compared to lifetime)
+DT = 10.0  # Time-step in years (should be short compared to lifetime)
 # Initialize the random number generator using specified seed
 SEED = 205
 random.seed(SEED)
