@@ -9,6 +9,9 @@ Examples in increasing complexity
 1  Circle.py
    Dart-board example for area of unit circle using uniform random numbers
 
+1b UniformPlot.py
+   Uniform.py but with a histogram
+
 2a Gaussian.py
    Throw Gaussian random numbers and keep track of statistics for the 
    generated sample. Use the standard normal distribution with mean 
