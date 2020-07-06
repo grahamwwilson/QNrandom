@@ -4,7 +4,7 @@ import random
 # Illustrate standard uniform random number generator
 
 # Initialize the random number generator using specified seed
-SEED = 202
+SEED = 203
 random.seed(SEED)
 
 NINSTANCES = 10         # Number of random numbers to generate
