@@ -1,5 +1,12 @@
-# QNrandom
+#QNrandom
 python code for KU QuarkNet workshop 2020
+
+#Update Jul-8-2020
+#Code depending on myrandom.py marked with *. These should work as 
+#designed from command line and Jupyter if running from folder with myrandom.py 
+#but may not work in Colab. For Colab users, you should use the versions 
+#with -NoMyRandom in the file name when working with *-applications.
+# example: Gaussian-NoMyRandom.py
 
 Examples in increasing complexity
 
@@ -12,17 +19,17 @@ Examples in increasing complexity
 1b UniformPlot.py
    Uniform.py but with a histogram
 
-2a Gaussian.py
+2a *Gaussian.py
    Throw Gaussian random numbers and keep track of statistics for the 
    generated sample. Use the standard normal distribution with mean 
    of zero and variance of 1. For generator implementation 
    details/understanding see later more explicit examples (2d,2e).
 
-2b GaussianExplore.py
+2b *GaussianExplore.py
    Essentially the same as 2a, but easier to explore further 
    what is going on, especially in the notebook context
 
-2c GaussianPlot.py
+2c *GaussianPlot.py
    Same as Gaussian.py, but also histogram the results, and 
    normalize, and superimpose the expected probability density function.
    Example also keeps track of what fraction of the random numbers 
@@ -43,7 +50,7 @@ Examples in increasing complexity
    Simulate radioactive decay in the context of dating 
    archaelogical/palaeontological samples using C-14.
 
-4  ECGaussianPlot.py
+4  *ECGaussianPlot.py
    Same as 2c above, but using an assumed mean of 51.5% and 
    a standard deviation of 2.2%. This corresponds to what polling firms 
    would call a 4.3% Margin-of-Error (1.96*2.2% = 4.3%).
@@ -54,10 +61,14 @@ Examples in increasing complexity
    favored by the poll actually get more than half the cast votes?
    (assumes only two candidates on the ballot).
 
-5a ElectoralCollege.py
+5a *ElectoralCollege.py
    Simulator for electoral college results based on throwing Gaussian 
    random numbers like in ECGaussianPlot.py for 6 battle-ground states 
    with different numbers of electoral votes.
 
-5b ElectoralCollegePlots.py
+5b *ElectoralCollegePlots.py
    Add plots and more diagnostics
+
+   myrandom.py
+   Module with Gaussian random number utilities used in the applications 
+   marked with a *.
