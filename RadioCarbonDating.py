@@ -1,9 +1,7 @@
 # RadioCarbonDating.py
+# (Python 3 based)
 import random
 import math
-import numpy as np
-import matplotlib.pyplot as plot
-import scipy.stats as ss
 
 # Use random numbers to estimate the age of a sample in years 
 # that has 18% of the expected C-14 fraction of a living sample 
@@ -16,10 +14,11 @@ import scipy.stats as ss
 # 
 # We run a simulation for as long as it takes to reduce the 
 # number of C-14 atoms that are undecayed to <18, <180 or <1800.
-# The simulation proceeds time-step by time-step (eg year-by-year, decade-by-decade, or century-by-century).
+# The simulation proceeds time-step by time-step (eg year-by-year, 
+# decade-by-decade, century-by-century, or millenium by millenium).
 # Note that depending on your time-step and the particular random number SEED, it may 
 # well be that there are multiple simulated years where the C-14 atom count is 
-# exactly equalt to NMEASURED.
+# exactly equal to NMEASURED.
 #
 # In contrast to the analytic calculation you did on Tuesday 
 # morning, we include probabilistic effects that mean that for 
@@ -44,7 +43,7 @@ TAU = HALFLIFE       # FIXME - you need to correctly convert from half-life to l
 print('Half-life set to',HALFLIFE,'years - corresponding lifetime is',TAU,'years.','Is this correct?')
 
 N0 = 1000
-DT = 10.0  # Time-step in years (should be short compared to lifetime)
+DT = 1000.0  # Time-step in years (should be short compared to lifetime)   FIXME
 # Initialize the random number generator using specified seed
 SEED = 205
 random.seed(SEED)
@@ -52,7 +51,7 @@ random.seed(SEED)
 NMEASURED = int(N0*18/100)
 print('Start with',N0,'undecayed C-14 atoms')
 print('Evolve in time until years when there are',NMEASURED,'undecayed C-14 atoms left')
-print('Use time step of',DT,'years and random number seed',SEED)
+print('Using time step of',DT,'years and random number seed',SEED)
 
 N = N0
 year = 0.0
@@ -64,11 +63,11 @@ print('Probability of decay of',pdecay,' per C-14 atom per',DT,' years ')
 print(' ')
 print('Starting the simulation ')
 print(' ')
-# Evolved forward in time one year at a time.
+# Evolve forward in time one time-step at a time.
 while N >= NMEASURED:
     nthrows = 0
-# For each undecay C-14 atom that started this year throw a random number to 
-# test whether the C-14 atom decayed during this year according to the calculated decay probability 
+# For each undecayed C-14 atom that started this time-step throw a random number to 
+# test whether the C-14 atom decayed during this time-step according to the calculated decay probability 
     for i in range(N):
         u = random.uniform(0.0,1.0)
         nthrows += 1
@@ -78,3 +77,10 @@ while N >= NMEASURED:
     print('After ',year,' years, undecayed C-14 atoms = ',N,' tested ',nthrows,' C-14 atoms')
 
 print('Finally after',year,' years, undecayed C-14 atoms = ',N)
+print()
+print('What result would you expect if you use a different random number seed? - Go ahead and see what you find with a different SEED')
+print()
+print('What result would you expect if you use a shorter time-step? - Go ahead and see what you find with a different DT')
+print()
+print('What result would you expect if you use 10 times more initial atoms? - Go ahead and see what you find with a larger N0')
+

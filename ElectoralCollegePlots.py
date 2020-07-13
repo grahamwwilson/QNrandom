@@ -125,5 +125,5 @@ plot.hist(rlist, bins=120)
 plot.title('Electoral College Histogram')
 plot.xlabel('Electoral Votes for R')
 plot.ylabel('Election Instances per bin')
-#plot.show()   
+plot.show()   
 
