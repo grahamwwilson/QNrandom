@@ -13,6 +13,9 @@ file name when working with the () applications where the myrandom.py
 code is copied directly into the .py file.
 example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
+Update Jul-13-2020
+Added CircleAnalyze.py extension of Circle.py
+
 ### Code examples in increasing complexity
 
 0  **Uniform.py**
@@ -20,6 +23,12 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
 1  **Circle.py**
    Dart-board example for area of unit circle using uniform random numbers
+
+1  **CircleAnalyze.py**
+   Dart-board example for area of unit circle using uniform random numbers
+   with uncertainty calculation using binomial distribution. 
+   This could also be done empirically more explicitly with ensembles 
+   similar to Gaussian.py below.
 
 1b **UniformPlot.py**
    Uniform.py but with a histogram
