@@ -76,4 +76,4 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
    **myrandom.py**
    Module with Gaussian random number utilities used in the applications 
-   marked with a *.
+   marked with (), like Gaussian.py.
