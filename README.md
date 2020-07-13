@@ -1,12 +1,13 @@
-#QNrandom
-python code for KU QuarkNet workshop 2020
+QNrandom: python code for KU QuarkNet workshop 2020
 
-#Update Jul-8-2020
-#Code depending on myrandom.py marked with *. These should work as 
-#designed from command line and Jupyter if running from folder with myrandom.py 
-#but may not work in Colab. For Colab users, you should use the versions 
-#with -NoMyRandom in the file name when working with *-applications.
-# example: Gaussian-NoMyRandom.py
+Update Jul-8-2020
+Code depending on myrandom.py marked with *. These should work as 
+designed from command line and Jupyter if running from folder containing
+myrandom.py. I don't yet know how to get this to work with Colab. 
+For Colab users, you should use the versions with -NoMyRandom in the 
+file name when working with the *'d applications where the myrandom.py 
+code is copied directly into the .py file.
+example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
 Examples in increasing complexity
 
