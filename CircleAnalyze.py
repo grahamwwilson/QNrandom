@@ -38,15 +38,14 @@ fraction = ncircle/NINSTANCES
 print('fraction ',fraction)
 estimate = 4.0*fraction
 print('4*fraction ',estimate)
+
 # Uncertainty analysis. Number of successes 
 # follows binomial distribution B(N,p) where N is the number of 
 # trials (NINSTANCES here), and p is the probability of success, 
 # which we can estimate using the observed fraction
-
 N = NINSTANCES
 p = fraction
-
-variance = N*p*(1.0-p)
+variance = N*p*(1.0-p)   # for binomial distribution
 uncertainty = math.sqrt(variance)    # on ncircle
 print('Estimate = ',4.0*p,'+-',4.0*uncertainty/N)
 
