@@ -1,4 +1,8 @@
-QNrandom: python code for KU QuarkNet workshop 2020
+## QNrandom 
+
+python code for KU QuarkNet workshop 2020
+
+### Modification notes
 
 Update Jul-8-2020
 Code depending on myrandom.py marked with *. These should work as 
@@ -9,7 +13,7 @@ file name when working with the *'d applications where the myrandom.py
 code is copied directly into the .py file.
 example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
-Examples in increasing complexity
+### Code examples in increasing complexity
 
 0  Uniform.py
    Starter example with uniform random numbers.
