@@ -1,6 +1,6 @@
 ## QNrandom 
 
-python code for KU QuarkNet workshop 2020
+python code on modeling using stochastic methods for KU QuarkNet workshop 2020
 
 ### Modification notes
 
@@ -34,28 +34,28 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
    Essentially the same as 2a, but easier to explore further 
    what is going on, especially in the notebook context
 
-2c (GaussianPlot.py)
+2c (**GaussianPlot.py**)
    Same as Gaussian.py, but also histogram the results, and 
    normalize, and superimpose the expected probability density function.
    Example also keeps track of what fraction of the random numbers 
    are within 1 standard deviation, and how many are outside 1.96 standard 
    deviations.
 
-2d GaussianGen.py
+2d **GaussianGen.py**
    Simple - but expose the details of getting a Gaussian random number 
    from uniform random numbers
 
-2e GaussianGenPlot.py
+2e **GaussianGenPlot.py**
    GaussianGen.py example with plots
 
-3a ExponentialPlot.py
+3a **ExponentialPlot.py**
    Throw exponential random numbers for the decay time of muons
 
-3b RadioCarbonDating.py
+3b **RadioCarbonDating.py**
    Simulate radioactive decay in the context of dating 
    archaelogical/palaeontological samples using C-14.
 
-4  (ECGaussianPlot.py)
+4  (**ECGaussianPlot.py**)
    Same as 2c above, but using an assumed mean of 51.5% and 
    a standard deviation of 2.2%. This corresponds to what polling firms 
    would call a 4.3% Margin-of-Error (1.96*2.2% = 4.3%).
@@ -66,14 +66,14 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
    favored by the poll actually get more than half the cast votes?
    (assumes only two candidates on the ballot).
 
-5a (ElectoralCollege.py)
+5a (**ElectoralCollege.py**)
    Simulator for electoral college results based on throwing Gaussian 
    random numbers like in ECGaussianPlot.py for 6 battle-ground states 
    with different numbers of electoral votes.
 
-5b (ElectoralCollegePlots.py)
+5b (**ElectoralCollegePlots.py**)
    Add plots and more diagnostics
 
-   myrandom.py
+   **myrandom.py**
    Module with Gaussian random number utilities used in the applications 
    marked with a *.
