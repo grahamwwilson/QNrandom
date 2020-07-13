@@ -15,22 +15,22 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
 
 ### Code examples in increasing complexity
 
-0  Uniform.py
+0  **Uniform.py**
    Starter example with uniform random numbers.
 
-1  Circle.py
+1  **Circle.py**
    Dart-board example for area of unit circle using uniform random numbers
 
-1b UniformPlot.py
+1b **UniformPlot.py**
    Uniform.py but with a histogram
 
-2a (Gaussian.py)
+2a (**Gaussian.py**)
    Throw Gaussian random numbers and keep track of statistics for the 
    generated sample. Use the standard normal distribution with mean 
    of zero and variance of 1. For generator implementation 
    details/understanding see later more explicit examples (2d,2e).
 
-2b (GaussianExplore.py)
+2b (**GaussianExplore.py**)
    Essentially the same as 2a, but easier to explore further 
    what is going on, especially in the notebook context
 
