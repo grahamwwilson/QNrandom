@@ -24,7 +24,7 @@ Added CircleAnalyze.py extension of Circle.py
 1  **Circle.py**
    Dart-board example for area of unit circle using uniform random numbers
 
-1  **CircleAnalyze.py**
+1a **CircleAnalyze.py**
    Dart-board example for area of unit circle using uniform random numbers
    with uncertainty calculation using binomial distribution. 
    This could also be done empirically more explicitly with ensembles 
