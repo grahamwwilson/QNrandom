@@ -1,0 +1,34 @@
+HOWTO.txt
+
+These programs are written with the more recent version of python, 
+namely python 3.
+
+Some of the programs have dependencies on numpy, matplotlib and scipy. 
+These are available from Notebook type interfaces like Colab 
+or Jupyter (with Anaconda installed), or need to be installed 
+with your python3 installation.
+
+There are three complementary ways to work with 
+increasing functionality, and specific IDEs like Spyder available.
+
+1) Google Colaboratory (or Colab for short).
+   Go to the URL, https://colab.research.google.com 
+   and execute Python from your browser using cloud resources.
+   
+   Create a notebook, copy python code such as Uniform.py 
+   into a cell, and execute.
+
+2) Install Anaconda (to ensure local access to Jupyter 
+   notebook and the scientific libraries). Details depend on OS. 
+   See https://docs.anaconda.com/anaconda/ and the Anaconda Cheat Sheet.
+
+   i) Use Jupyter notebook as a notebook style interface. 
+      Again, create a notebook, copy python code into a cell, and execute.
+      This executes locally.
+
+  ii) Run python "natively" from the command line on your computer.
+      Examples "python3 Uniform.py"
+               "python3 Gaussian-NoMyRandom.py"
+
+Option 1, should be minimalist effort and allow you to use this code.
+Option 2, likely preferable for further development and exploration. 
