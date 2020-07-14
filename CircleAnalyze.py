@@ -7,11 +7,11 @@ import math
 # introductory dart-board example
 
 # Initialize the random number generator using specified seed
-SEED = 203
+SEED = 204
 random.seed(SEED)
 
 NINSTANCES = 4000000     # Number of experiments to run
-NTOPRINT = 10           # Number of experiments to print
+NTOPRINT = 10            # Number of experiments to print
 
 # Keep track of number within unit circle of radius, 1.0
 ncircle = 0
@@ -36,7 +36,8 @@ print('Number of trial random numbers inside circle of radius 1.0 = ',ncircle)
 
 fraction = ncircle/NINSTANCES
 print('fraction ',fraction)
-estimate = 4.0*fraction
+#estimate the area of the circle (fraction*area-of-square)
+estimate = 4.0*fraction         
 print('4*fraction ',estimate)
 
 # Uncertainty analysis. Number of successes 
@@ -47,8 +48,9 @@ N = NINSTANCES
 p = fraction
 variance = N*p*(1.0-p)   # for binomial distribution
 uncertainty = math.sqrt(variance)    # on ncircle
-print('Estimate = ',4.0*p,'+-',4.0*uncertainty/N)
+print('Area estimate = ',4.0*p,'+-',4.0*uncertainty/N)
+print('fractional uncertainty = ',100.0*uncertainty/(p*N),'%')
 
 deviation = (4.0*p - math.pi)/math.pi
-print('Percentage deviation = ',100.0*deviation,'%')
-print('Actual value of pi = ',math.pi)
+print('Percentage deviation from pi = ',100.0*deviation,'%')
+print('True value of pi = ',math.pi)
