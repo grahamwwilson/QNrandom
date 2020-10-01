@@ -16,6 +16,12 @@ example: Gaussian-NoMyRandom.py instead of Gaussian.py
 Update Jul-13-2020
 Added CircleAnalyze.py extension of Circle.py
 
+Update Oct-01-2020
+Add Correlations.py example for 516 (this depends on ROOT for plotting).
+This illustrates using random numbers for error modeling 
+with correlations.
+A pure pythonic version should use matplotlib or similar.
+
 ### Code examples in increasing complexity
 
 0  **Uniform.py**
@@ -86,3 +92,6 @@ Added CircleAnalyze.py extension of Circle.py
    **myrandom.py**
    Module with Gaussian random number utilities used in the applications 
    marked with (), like Gaussian.py.
+
+6 (**Correlations.py**)
+   516 pendulum lab example
